@@ -6,40 +6,34 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    'article-one':{
-        title:' Article One| Prabhjot Singh'
-            heading:'Article One'
-            date:'September 29 , 2016'
+    'article-one':{title:' Article One| Prabhjot Singh',
+            heading:'Article One',
+            date:'September 29 , 2016',
             content:`
     <p>
-        This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.
-</p>
-   <p>
-        This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.
-   </p>
-   <p>
-          This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.This is some content for my first article.
-    </p>  `
-             
-    
-},
-    'article-two':{ title:' Article Two| Prabhjot Singh'
-             heading:'Article Two'
-             date:'September 30 , 2016'
+        This is some content for my first article.
+</p>`
+      } ,
+      
+    'article-two': { 
+             title:' Article Two| Prabhjot Singh',
+             heading:'Article Two',
+             date:'September 30 , 2016',
              content:`
-             <p>
+    <p>
         This is some content for my second article.
-    </p>
-     `},
-    'article-three':{ title:' Article Three| Prabhjot Singh'
-             heading:'Article Three'
-             date:'September 31 , 2016'
+</p>`
+      },
+    'article-three':{
+             title:' Article Three| Prabhjot Singh',
+             heading:'Article Three',
+             date:'September 31 , 2016',
              content:`
-             <p>
+    <p>
         This is some content for my third article.
-    </p>
+</p>`
       `}
-};
+             };
 function createTemplate(data){
 var title=data.title;
 var heading=data.heading;
@@ -50,7 +44,7 @@ var htmlTemplate=
 <html>
 <head>
  <title>   
- ${title}
+ $ {title}
   </title>  
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link href="/ui/style.css" rel="stylesheet" />
@@ -62,13 +56,13 @@ var htmlTemplate=
       </div>
 <hr/>
 <h3>
-  ${heading}
+  $ {heading}
     </h3>
 <div>
-    ${date}
+    $ {date}
     </div>
 <div>
-   ${content}
+   $ {content}
     </div>
     </div>
     </body>
@@ -97,6 +91,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8080, function () {
+app.listen(8080, function ()
+{
   console.log(`IMAD course app listening on port ${port}!`);
-});
+}                  );
