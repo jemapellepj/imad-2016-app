@@ -24,6 +24,7 @@ var articles={
         This is some content for my second article.
 </p>`
       },
+
     'article-three':{
              title:' Article Three| Prabhjot Singh',
              heading:'Article Three',
@@ -32,7 +33,7 @@ var articles={
     <p>
         This is some content for my third article.
 </p>`
-      `}
+      }
              };
 function createTemplate(data){
 var title=data.title;
@@ -40,8 +41,9 @@ var heading=data.heading;
 var date=data.date
 var content=data.content;
 
-var htmlTemplate=
-<html>
+var htmlTemplate=`
+(<html>
+
 <head>
  <title>   
  $ {title}
@@ -49,6 +51,7 @@ var htmlTemplate=
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link href="/ui/style.css" rel="stylesheet" />
 </head>
+
 <body>
 <div class="container">
 <div>
@@ -66,10 +69,11 @@ var htmlTemplate=
     </div>
     </div>
     </body>
+
 </html>
 ;
 return htmlTemplate;
-)
+`}
 
 
 app.get('/', function (req, res) {
