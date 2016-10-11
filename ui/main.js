@@ -6,7 +6,7 @@ element.innerHTML='New Value';
  var moveRight=function(){
      marginLeft=marginLeft +10;
      img.style.maginLeft=marginLeft +'px';
- }
+ };
  img.onclick=function(){
   var interval=setInterval(moveRight,100)   
- }
+ };
