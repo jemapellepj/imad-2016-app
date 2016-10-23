@@ -12,7 +12,7 @@ var articles={
             content:`
     <p>
         This is some content for my first article.
-</p>`
+</p>                                               `
       } ,
       
     'article-two': { 
@@ -20,9 +20,9 @@ var articles={
              heading:'Article Two',
              date:'September 30 , 2016',
              content:`
-    <p>
-        This is some content for my second article.
-</p>`
+                       <p>
+                          This is some content for my second article.
+                      </p>     `
       },
 
     'article-three':{
@@ -32,7 +32,7 @@ var articles={
              content:`
     <p>
         This is some content for my third article.
-</p>`
+</p>                                                 `
       }
              };
 function createTemplate(data){
